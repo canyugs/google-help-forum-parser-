@@ -103,7 +103,7 @@ if __name__ == '__main__':
         sys.exit()
 
     log('Initializing')
-    json_encoder = json.JSONEncoder()
+    json_encoder = json.JSONEncoder(ensure_ascii=False)
     file_op = open('posts.result', 'a', encoding = 'UTF-8')
 
     driver = webdriver.PhantomJS()
